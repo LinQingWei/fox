@@ -1,4 +1,9 @@
+## Purpose 
+
+decompile source code from android phone(android N & Pre)
+
 ## Setup
+
 prepare env
 ```shell
 $ cd ~/fox/
