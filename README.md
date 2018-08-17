@@ -1,4 +1,4 @@
-## Purpose 
+## Purpose
 
 decompile source code from android phone(android N & Pre)
 
@@ -6,8 +6,11 @@ decompile source code from android phone(android N & Pre)
 
 prepare env
 ```shell
-$ cd ~/fox/
-$ ./fox install 
+$ cd ~
+$ git clone https://github.com/HEZI0427/fox.git
+$ mkdir -p ~/bin; cd ~/bin
+$ ln -fs ~/fox/fox
+$ fox install
 ```
 ## Use
 #### decompile framework
