@@ -48,9 +48,13 @@ function vdex2dex() {
     local smalidir=${_outdir%.*}
     local outdex=${2:-classes.dex}
     local outvdex=${smalidir}.apk_classes.dex
+    local outcdex=${smalidir}_classes.cdex
+    local outcdexnew=${smalidir}_classes.cdex.new
     echo "vdex -> dex " ${outvdex} ${outdex}
     vdexExtractor --ignore-crc-error -i ${vdex} -o  ./
-    mv ${outvdex} ${outdex}
+    compact_dex_converter ${outcdex}
+    rm ${outcdex}
+    mv ${outcdexnew} ${outdex}
 }
 
 function get_classesdex_in_oat() {
@@ -114,6 +118,7 @@ function extract_dex_from_frameworks() {
             echo "jadx: $dex -> to java"
             jadx_wrapper ${package}-${more} -d ${package}
         done
+        rm *.dex *.jobf
     done
 }
 
