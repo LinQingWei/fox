@@ -15,6 +15,7 @@ ln -fs $SELF_PATH/smali.jar
 ln -fs $SELF_PATH/vdexExtractor
 ln -fs $SELF_PATH/jadx-dir/bin/jadx
 ln -fs $SELF_PATH/jadx-dir/bin/jadx-gui
+ln -fs $SELF_PATH/compact_dex_converter compact_dex_converter
 
 case $(uname -s) in
     Linux)
